@@ -36,7 +36,7 @@ THE SOFTWARE.
 import sys
 import time
 from grove.gpio import GPIO
-import RPi.GPIO as GPIO_RPi
+#import RPi.GPIO as GPIO_RPi
 
 usleep = lambda x: time.sleep(x / 1000000.0)
 
