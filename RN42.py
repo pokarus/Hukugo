@@ -61,14 +61,14 @@ class RN42:
     def connectBluetooth(self, bdAddr, port):
         while(1):
             try:
-                print self.__name + " : Connect......"
+                print (self.__name + " : Connect......")
                 self.__sock.connect((bdAddr,port))
                 sleep(2)
-                print self.__name + " : Successful Connected!!!"
+                print (self.__name + " : Successful Connected!!!")
                 break
             except bluetooth.BluetoothError :
-                print self.name + " : connecting failed"
-                print "try connecting"
+                print (self.name + " : connecting failed")
+                print ("try connecting")
                 self.reConnect(bdAddr, port)
                 sleep(0.5)
             except KeyboardInterrupt:

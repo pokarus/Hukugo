@@ -13,12 +13,12 @@ class Main:
     ras = RN42("ras", "B8:27:EB:B9:40:6E", 1)
     ras.connectBluetooth(ras.bdAddr,ras.port)
 
-    print "Entering main loop now"
+    print ("Entering main loop now")
 
     while 1:
         try:
             ras.sock.send("Hello World")
-            print "data send"
+            print ("data send")
             time.sleep(1)
         except KeyboardInterrupt:
             ras.disconnect(ras.sock)
